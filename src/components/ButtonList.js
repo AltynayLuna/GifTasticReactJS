@@ -4,7 +4,9 @@ export default class ButtonList extends Component {
     constructor(){
         super();
         this.state = {
-            buttons : []
+            buttons : [
+                
+            ]
         }
     }
 
@@ -22,16 +24,20 @@ export default class ButtonList extends Component {
         }
     }
 
+    updateMovieList = (event) => {
+        console.log(event.currentTarget.textContent);
+        this.props.clickHandler(event.currentTarget.textContent);
+    }
+
     render() {
         return(
             <div>
                 <section id="buttonList">
-                <button>Pulp Fiction</button>
-                <button>Forrest Gump</button>
-                <button>Titanic</button>                
                     {
-                        this.state.buttons.map((button) => {
-                            return button;
+                        this.state.buttons.map((movieTitle, i) => {
+                            return (
+                                <button key={`button-${i}`} onClick={ this.updateMovieList }>{movieTitle}</button>
+                            );
                         })
                     }
                 </section>

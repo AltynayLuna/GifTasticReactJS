@@ -8,8 +8,19 @@ export default class Homepage extends Component {
     constructor(){
         super();
         this.state = {
-            buttonList : []
+            buttonList : [],
+            movieTitle: ''
         }
+    }
+
+    componentDidMount(){
+        this.setState({
+            buttonList: [
+                "Forrest Gump",
+                "Pulp Fiction",
+                "Titanic"
+            ]
+        });
     }
 
     imageButtonHandler = (movieTitle) => {
@@ -17,6 +28,10 @@ export default class Homepage extends Component {
         this.setState({
             buttonList: [...this.state.buttonList, newMovieButton]
         });
+    }
+
+    movieButtonHandler = (movieTitle) => {
+        this.setState({ movieTitle });
     }
 
     render() {
@@ -30,8 +45,11 @@ export default class Homepage extends Component {
                     </div>
                 </section>
                 <AddMovie newButton = {this.imageButtonHandler}/>
-                <ButtonList buttonList={this.state.buttonList}/>
-                <MovieImageList />
+                <ButtonList 
+                    buttonList={this.state.buttonList} 
+                    clickHandler={ this.movieButtonHandler }
+                />
+                <MovieImageList movieTitle={this.state.movieTitle}/>
                 <MovieGif />
             </div>
         )

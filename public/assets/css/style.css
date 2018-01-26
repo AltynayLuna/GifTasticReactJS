@@ -1,0 +1,166 @@
+/* 
+01 - MAIN
+02 - SHOWCASE
+XYZ - MEDIA QUERIES
+*/
+
+/* 01 - MAIN */
+@font-face {
+font-family: 'Pulp Fiction M54';
+src: url('../fonts/Pulp Fiction M54.ttf') format('truetype');
+}
+body {
+	font-family: "Pulp Fiction M54", "Open-sans", sans-serif;
+	font-size: 20px;
+	line-height: 1.5em;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+/* 02 - SHOWCASE */
+#showcase {
+	background: url("../images/image-2.jpg") no-repeat;
+	border-bottom: 1px solid #000; 
+	background-size: 100%;
+}
+.showcase-content h1 {
+	font-size: 30px;
+}
+.showcase-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+	height: 630px;
+}
+.showcase-content {
+	background-color: #333;
+	color: #fff;
+	border-radius: 90px;
+	padding: 10px 40px;
+	opacity: 0.9;
+	margin-bottom: 5%;
+}
+.primary-text {
+	color: #f70455;
+	font-family: "Mistral", sans-serif;
+}
+.primary-background {
+	color: #56a79a;
+}
+/* 03 - ADD MOVIE */
+#features {
+	background-color: #333;
+	opacity: 0.9;
+	color: #f70455;
+	border-bottom: 1px solid #000; 
+}
+.features-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: column;
+}
+.features-content p {
+	color: #fff;
+	margin-top: 7px;
+	margin-bottom: 3px;	
+}
+#movie-input {
+	width: 20%;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#add-movie {
+	width: 15%;
+	padding: 10px 0;
+	border: 0;
+	background: #222;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* 04 - BUTTON LIST */
+#buttonList {
+	background-color: #333;
+	opacity: 0.9;
+	color: #f70455;
+	border-bottom: 1px solid #000; 
+	display: flex;
+	justify-content: center;
+
+}
+#buttonList button {
+	background-color: #f70455;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Pulp Fiction M54";
+    margin: 10px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border: none;
+}
+
+/* XYZ - MEDIA QUERIES */
+@media all and (max-width: 500px) {
+	.showcase-container {
+		height: 200px;
+	}
+	.showcase-content {
+		width: 40%;
+		height: 50px;
+		margin: 0;
+	}
+	.showcase-content h1 {
+		font-size: .6em;	
+		text-align: center;
+	}
+	.showcase-content span {
+		font-size: 1.5em;
+	}
+	#movie-input {
+		width: 70%;
+		font-size: 17px;
+	}
+	#add-movie {
+		font-size: 15px;
+		width: 50%;
+	}
+	#buttonList {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;	
+	}
+	#buttonList button {
+		width: 70%;
+	}
+} 
+
+@media all and (max-width: 800px) {
+	#add-movie {
+		font-size: 15px;
+		width: 25%;
+	}
+	#movie-input {
+		width: 60%;
+		font-size: 17px;
+		height: 50px;	
+	}
+	#buttonList {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 10px;
+	}
+}

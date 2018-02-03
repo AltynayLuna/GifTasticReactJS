@@ -25,7 +25,6 @@ export default class ButtonList extends Component {
     }
 
     updateMovieList = (event) => {
-        console.log(event.currentTarget.textContent);
         this.props.clickHandler(event.currentTarget.textContent);
     }
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AddMovie from './AddMovie';
 import ButtonList from './ButtonList';
 import MovieImageList from './MovieImageList';
-import MovieGif from './MovieGif';
 
 export default class Homepage extends Component {
     constructor(){
@@ -26,7 +25,7 @@ export default class Homepage extends Component {
     imageButtonHandler = (movieTitle) => {
         let newMovieButton = <button>{movieTitle}</button>
         this.setState({
-            buttonList: [...this.state.buttonList, newMovieButton]
+            buttonList: [...this.state.buttonList, movieTitle]
         });
     }
 
@@ -50,7 +49,6 @@ export default class Homepage extends Component {
                     clickHandler={ this.movieButtonHandler }
                 />
                 <MovieImageList movieTitle={this.state.movieTitle}/>
-                <MovieGif />
             </div>
         )
     }

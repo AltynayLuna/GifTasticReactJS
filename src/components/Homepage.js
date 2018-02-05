@@ -35,7 +35,7 @@ export default class Homepage extends Component {
 
     render() {
         return(
-            <div>
+            <div className="main">
                 <section id="showcase">
                     <div className="showcase-container">
                         <div className="showcase-content">

@@ -25,7 +25,7 @@ export default class AddMovie extends Component {
                 <section id="features">
                     <div className="features-container">
                         <div className="features-content"> 
-                            <p>Add a New Movie</p>
+                            <h1>Add a New Movie</h1>
                             <input type="text" id="movie-input" placeholder="Movie Title" onChange={this.movieTitleHandler} value={this.state.currentMovieTitle}/>
                             <button id="add-movie" onClick={this.updateNewMovie} >Submit!</button>
                             <div></div>
